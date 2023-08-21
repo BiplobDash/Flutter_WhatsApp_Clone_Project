@@ -5,12 +5,15 @@ PreferredSizeWidget CommonAppbar({
   required String title,
   bool? showAction,
   IconData? actionIcon,
+  required BuildContext context,
 }) {
   return AppBar(
     backgroundColor: appBarBg,
     automaticallyImplyLeading: false,
     leading: IconButton(
-      onPressed: () {},
+      onPressed: () {
+        Navigator.pop(context);
+      },
       icon: const Icon(
         Icons.arrow_back,
         color: Colors.white,
